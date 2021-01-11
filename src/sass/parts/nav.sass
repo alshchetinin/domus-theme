@@ -1,0 +1,37 @@
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 16px
+  background: $color-additional-white
+  @media screen and (max-width: 1420px)
+    flex-wrap: wrap
+  &__right
+    display: flex  
+    justify-content: space-between
+    align-items: center
+    .favorite
+      display: block
+      margin-right: 24px
+  nav
+    @media screen and (max-width: 1420px)
+      order: 3
+      width: 100%
+      margin-top: 16px
+
+
+.primary-menu  
+  ul
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    margin: 0px
+    padding: 0
+    li
+      margin-right: 18px
+      &:last-of-type
+        margin-right: 0px
+      a
+        padding: 12px 4px
+        display: block
+        +font-ui-menu()

@@ -1,0 +1,103 @@
+$color-theme-text: rgba(45, 64, 89, 1)
+$color-theme-primary: rgba(232, 157, 46, 1)
+$color-theme-secondary: rgba(243, 248, 255, 1)
+$color-theme-gray: rgba(246, 246, 246, 1)
+$color-functional-input-bg: rgba(255, 255, 255, 1)
+$color-functional-input-border: rgba(237, 237, 237, 1)
+$color-functional-succes: rgba(140, 186, 81, 1)
+$color-functional-error: rgba(253, 94, 83, 1)
+$color-functional-link: rgba(255, 159, 89, 1)
+$color-additional-blue: rgba(45, 93, 217, 1)
+$color-functional-input-font: rgba(45, 64, 89, 1)
+$color-functional-offset: rgba(104, 101, 255, 1)
+$color-additional-white: rgba(255, 255, 255, 1)
+$offset-section: 144px
+
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+  @font-face
+    font-family: $f-name
+    font-style: $f-style
+    font-weight: $f-weight
+    src: url($f-url) format('woff2')
+
+
+=offset-section
+  margin-bottom: $offset-section
+
+=font-desktop-h1
+  font-size: 44px
+  font-family: "Stem"
+  font-weight: 900
+  line-height: 56px
+
+=font-desktop-h2
+  font-size: 32px
+  font-family: "Stem"
+  font-weight: 900
+
+=font-desktop-h3
+  font-size: 24px
+  font-family: "Stem"
+  font-weight: 500
+  line-height: 32px
+
+=font-desktop-h4
+  font-size: 18px
+  font-family: "Stem"
+  font-weight: 400
+  line-height: 24px
+
+=font-desktop-paragraph
+  font-size: 16px
+  font-family: "Stem"
+  font-weight: 300
+  line-height: 24px
+
+=font-desktop-small-text
+  font-size: 14px
+  font-family: "Stem"
+  font-weight: 300
+  line-height: 24px
+
+=font-ui-input-font
+  font-size: 16px
+  font-family: "Stem"
+  font-weight: 500
+  line-height: 16px
+
+=font-ui-button
+  font-size: 16px
+  font-family: "Stem"
+  font-weight: 400
+  line-height: 16px
+
+=font-ui-menu
+  font-size: 13px
+  font-family: "Stem"
+  font-weight: 500
+  line-height: 12px
+  text-transform: uppercase
+  color: $color-theme-text
+  transition: color .3s ease
+  &:hover
+    color: $color-theme-primary
+    text-decoration: none
+  
+
+=font-ui-phone
+  font-size: 16px
+  font-family: "Stem"
+  font-weight: bold
+  line-height: 16px
+
+=font-desktop-paragraph-bold
+  font-size: 16px
+  font-family: "Stem"
+  font-weight: 500
+  line-height: 24px
+
+=font-ui-date
+  font-size: 12px
+  font-family: "Stem"
+  font-weight: 500
+  line-height: 8px

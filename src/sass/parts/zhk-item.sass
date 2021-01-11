@@ -1,0 +1,57 @@
+.zhk-item
+  margin-bottom: 40px
+  position: relative
+  display: block
+  color: $color-theme-text
+  transition: all .3s ease
+  &:hover
+    color: $color-theme-text
+    text-decoration: none
+    transform: translateY(-3px)
+  &__favorite    
+    border: none
+    background-color: transparent
+  img
+    margin-bottom: 12px
+    width: 100%
+    height: auto
+    border-radius: 8px
+  &__top
+    position: absolute
+    display: flex
+    width: 100%
+    top: 0px
+    padding: 8px
+    justify-content: space-between
+    align-items: center
+  &__tag
+    padding: 4px
+    font-size: 12px
+    font-weight: 300
+    background: $color-additional-white
+    border-radius: 4px
+    display: flex
+    align-items: center
+    svg
+      margin-right: 4px
+  &__text
+    display: flex
+    justify-content: space-between
+    +font-desktop-h4()
+  &__name
+    
+
+  &__price
+    
+
+  &__description
+    display: flex
+    justify-content: space-between
+    font-size: 12px
+    font-weight: 300
+  &__adress
+    opacity: .5
+
+  &__year
+    font-weight: 400
+

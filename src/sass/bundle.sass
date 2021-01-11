@@ -1,0 +1,94 @@
+@import 'vars'
+@import '../../node_modules/bootstrap/scss/bootstrap-grid.scss'
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import '../../node_modules/slick-carousel/slick/slick.scss'
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss'
++font("Stem", normal, 900, "../fonts/Stem-Bold.woff2")
++font("Stem", normal, 500, "../fonts/Stem-medium.woff2")
++font("Stem", normal, 400, "../fonts/Stem-regular.woff2")
++font("Stem", normal, 300, "../fonts/Stem-light.woff2")
+
+body
+  color: $color-theme-text
+  font-family: 'Stem', 'Arial', sans-serif
+  -webkit-font-smoothing: subpixel-antialiased
+
+h1
+  +font-desktop-h1()
+
+h2
+  +font-desktop-h2()
+section
+  +offset-section()
+
+label
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  margin-right: 24px
+  margin-bottom: 0px
+  input
+    border: 1px solid #EDEDED
+    box-sizing: border-box
+    border-radius: 3px
+    height: 40px
+    padding: 12px
+    
+    +font-ui-input-font()
+
+
+p
+  margin: 0px
+  padding: 0px
+  +font-desktop-paragraph()
+
+.page-title
+  h1
+    +font-desktop-h2()
+
+.color-primary
+  color: $color-theme-primary  
+.tab
+  display: flex
+  align-items: center
+  padding: 8px 16px
+  background: $color-additional-white
+  border-radius: 4px  
+  cursor: pointer
+  transition: all .3s ease
+  color: transparentize($color-theme-text, .5)
+  +font-desktop-small-text()
+  &:hover
+    color: $color-theme-text
+  &_active
+    color: $color-theme-text
+    
+.section-title
+  margin-bottom: 32px  
+.phone
+  +font-ui-phone()
+
+.primary-button
+  display: inline-flex
+  padding: 12px 24px
+  border-radius: 8px
+  color: $color-additional-white
+  background-color: $color-theme-primary
+  transition: all .4s ease
+  outline: none
+  border: none
+  +font-ui-button()
+  &:hover
+    color: $color-additional-white
+    background: fade-out($color-theme-primary, .1)
+    text-decoration: none
+    
+@import 'parts/nav'
+@import 'parts/main-bg'
+@import 'parts/stories'
+@import 'parts/about'
+@import 'parts/mortage'
+@import 'parts/form'
+@import 'parts/review-item'
+@import 'parts/news-item'
+@import 'parts/zhk-item'
