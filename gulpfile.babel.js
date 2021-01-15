@@ -19,7 +19,7 @@ const PRODUCTION = yargs.argv.prod;
 export const styles = () => {
   return src('src/sass/bundle.sass')
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass.sync().on("error", sass.logError))
     .pipe(gulpif(PRODUCTION, autoprefixer({
       grid: true,
       overrideBrowserslist: ["last 10 versions"]
@@ -31,7 +31,7 @@ export const styles = () => {
 }
 
 export const scripts = () => {
-  return src(['src/js/bundle.js','src/js/admin.js'])
+  return src(['src/js/bundle.js'])
     .pipe(named())
     .pipe(webpack({
       module: {
@@ -76,7 +76,7 @@ export const images = () => {
 }
 
 export const watchForChanges = () => {
-  watch('src/scss/**/*.scss', series(styles, reload));
+  watch('src/sass/**/*.sass', series(styles, reload));
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
   watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
   watch('src/js/**/*.js', series(scripts, reload));

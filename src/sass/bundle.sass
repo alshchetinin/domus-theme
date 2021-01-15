@@ -1,8 +1,7 @@
 @import 'vars'
 @import '../../node_modules/bootstrap/scss/bootstrap-grid.scss'
 @import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss'
-@import '../../node_modules/slick-carousel/slick/slick.scss'
-@import '../../node_modules/slick-carousel/slick/slick-theme.scss'
+@import '../../node_modules/swiper/swiper-bundle.css'
 +font("Stem", normal, 900, "../fonts/Stem-Bold.woff2")
 +font("Stem", normal, 500, "../fonts/Stem-medium.woff2")
 +font("Stem", normal, 400, "../fonts/Stem-regular.woff2")
@@ -11,7 +10,8 @@
 body
   color: $color-theme-text
   font-family: 'Stem', 'Arial', sans-serif
-  -webkit-font-smoothing: subpixel-antialiased
+  -webkit-font-smoothing: subpixel-antialiased  
+  font-weight: 400
 
 h1
   +font-desktop-h1()
@@ -27,14 +27,62 @@ label
   flex-grow: 1
   margin-right: 24px
   margin-bottom: 0px
-  input
-    border: 1px solid #EDEDED
-    box-sizing: border-box
-    border-radius: 3px
-    height: 40px
-    padding: 12px
-    
-    +font-ui-input-font()
+  position: relative
+input, select
+  border: 1px solid #EDEDED
+  box-sizing: border-box
+  border-radius: 3px
+  height: 40px
+  padding: 8px
+  
+  +font-ui-input-font()
+
+select    
+  width: 100%
+
+.checkbox-rooms span
+  display: flex
+  height: 40px
+  align-items: center
+  justify-content: center
+  padding: 0px 12px
+  margin-right: 0px
+  background: $color-theme-gray
+  border-radius: 4px
+  cursor: pointer
+  transition: all .1s ease-in-out
+
+
+/* Dafault */
+.checkbox-rooms input[type=checkbox] 
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+/* Focus */
+.checkbox-rooms input[type=checkbox]:focus + span
+  background: $color-theme-text
+  color: $color-additional-white
+
+/* Checked */
+.checkbox-rooms input[type=checkbox]:checked + span
+  background: $color-theme-text
+  color: $color-additional-white
+
+.checkbox-rooms input[type=checkbox]:not(:checked) + span
+  background: $color-theme-gray
+  color: $color-theme-text  
+
+/* Disabled */
+.checkbox-rooms input[type=checkbox]:disabled + span
+  background: transparentize($color-theme-gray, 0.6)
+  color: transparentize($color-theme-text, 0.6) 
+
+.checkbox-rooms input[type=checkbox]:disabled:checked + span
+  background: transparentize($color-theme-text, 0.6)
+  color: transparentize($color-additional-white, 0.6) 
+
+
 
 
 p
@@ -83,6 +131,9 @@ p
     background: fade-out($color-theme-primary, .1)
     text-decoration: none
     
+
+.big-slider    
+  border-radius: 4px
 @import 'parts/nav'
 @import 'parts/main-bg'
 @import 'parts/stories'
@@ -92,3 +143,5 @@ p
 @import 'parts/review-item'
 @import 'parts/news-item'
 @import 'parts/zhk-item'
+@import 'parts/page-form-search'
+@import 'template/layout-obj'

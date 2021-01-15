@@ -10,7 +10,8 @@ function _themename_setup() {
   register_nav_menu( 'primary', 'primary-menu' );
 	// Add featured image support
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'zhk-thumbnail', 360, 224, true );
+  add_image_size( 'zhk-thumbnail', 360, 224, true );
+  add_image_size( 'page-bigimg', 860, 600, true );
 }
 
 add_action( 'after_setup_theme', '_themename_setup' );
