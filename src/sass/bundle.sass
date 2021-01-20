@@ -2,9 +2,10 @@
 @import '../../node_modules/bootstrap/scss/bootstrap-grid.scss'
 @import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss'
 @import '../../node_modules/swiper/swiper-bundle.css'
+@import 'https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css'
 +font("Stem", normal, 900, "../fonts/Stem-Bold.woff2")
-+font("Stem", normal, 500, "../fonts/Stem-medium.woff2")
-+font("Stem", normal, 400, "../fonts/Stem-regular.woff2")
++font("Stem", normal, 500, "../fonts/Stem-regular.woff2")
++font("Stem", normal, 400, "../fonts/Stem-medium.woff2")
 +font("Stem", normal, 300, "../fonts/Stem-light.woff2")
 
 body
@@ -91,6 +92,7 @@ p
   +font-desktop-paragraph()
 
 .page-title
+  margin: 24px 0px 16px 0px
   h1
     +font-desktop-h2()
 
@@ -134,6 +136,9 @@ p
 
 .big-slider    
   border-radius: 4px
+
+.project-map  
+  height: 100%
 @import 'parts/nav'
 @import 'parts/main-bg'
 @import 'parts/stories'
@@ -142,6 +147,14 @@ p
 @import 'parts/form'
 @import 'parts/review-item'
 @import 'parts/news-item'
-@import 'parts/zhk-item'
 @import 'parts/page-form-search'
-@import 'template/layout-obj'
+@import 'template/project'
+@import 'parts/advantage-whith-us'
+
+
+//project
+@import 'parts/project-title'
+@import 'parts/project-meta-item'
+@import 'parts/project-features'
+@import 'parts/project-attribute'
+@import 'parts/project-item'

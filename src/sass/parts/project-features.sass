@@ -1,0 +1,18 @@
+.project-features
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  column-gap: 20px
+.project-features-item
+  &__title
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.75px
+    text-transform: uppercase
+    font-weight: 400
+    margin-bottom: 8px
+  &__text            
+    +font-desktop-small-text()
+  &__img
+    border-radius: 8px
+    margin-bottom: 16px
+    max-width: 100%

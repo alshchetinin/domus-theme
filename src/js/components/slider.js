@@ -7,3 +7,13 @@ const swiper = new Swiper('.big-slider', {
   },
 
 });
+
+const swiperZastr = new Swiper('.zastr-info__slider', {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+});

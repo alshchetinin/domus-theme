@@ -16,6 +16,14 @@ function _themename_setup() {
 
 add_action( 'after_setup_theme', '_themename_setup' );
 
-
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title'    => __('Настройки сайта'),
+		'menu_title'    => __('Настройки сайта'),
+		'menu_slug'     => 'theme-general-settings'
+  ));
+	
+}
 ?>
 

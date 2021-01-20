@@ -1,0 +1,76 @@
+.project-item
+  margin-bottom: 40px
+  position: relative
+  display: block
+  color: $color-theme-text
+  transition: all .3s ease
+  &:hover
+    color: $color-theme-text
+    text-decoration: none
+    transform: translateY(-3px)
+  &__favorite    
+    border: none
+    background-color: transparent
+  img
+    margin-bottom: 12px
+    width: 100%
+    height: auto
+    border-radius: 8px
+  &__top
+    position: absolute
+    display: flex
+    width: 100%
+    top: 0px
+    padding: 8px
+    justify-content: space-between
+    align-items: center
+  &__tag
+    padding: 4px
+    font-size: 12px
+    font-weight: 300
+    background: $color-additional-white
+    border-radius: 4px
+    display: flex
+    align-items: center
+    svg
+      margin-right: 4px
+    &_none
+      opacity: 0      
+  &__heading
+    display: flex
+    justify-content: space-between
+    +font-desktop-h4()
+  &__heading-one
+    
+
+  &__heading-two
+    
+
+  &__meta
+    display: flex
+    justify-content: space-between
+    font-size: 12px
+    font-weight: 300
+    margin-bottom: 10px
+  &__meta-one
+    opacity: .5
+
+  &__meta-two
+    font-weight: 400
+
+
+.project-item-rieltor
+  display: flex
+  align-items: center
+  &__avatar
+    width: 40px
+    height: 40px
+    background: $color-theme-gray
+    border-radius: 40px
+    margin-right: 12px
+  &__text
+    display: flex
+    flex-direction: column
+    font-weight: 400
+
+

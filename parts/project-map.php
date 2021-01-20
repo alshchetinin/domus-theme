@@ -1,0 +1,1 @@
+<div class="project-map" id="project-map" data-icon="<?php echo $args['iconMap']; ?>" data-lat="<?php echo $args['lat']; ?>" data-lng="<?php echo $args['lng']; ?>" ></div>

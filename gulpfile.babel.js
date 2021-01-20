@@ -76,7 +76,7 @@ export const images = () => {
 }
 
 export const watchForChanges = () => {
-  watch('src/sass/**/*.sass', series(styles, reload));
+  watch('src/sass/**/*.sass', series(styles));
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
   watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
   watch('src/js/**/*.js', series(scripts, reload));
